@@ -154,7 +154,7 @@ A wrapper for a class that hides the implementation details (e.g. the data struc
 Similar to adapter, but the service also implements the interface and the client uses the proxy instead of the service directly for security and performance. E.g. preprocessing, denying execution, etc. before the proxy sends it to the service. You can have multiple proxies that implement different reasons to use the proxy (e.g. different ones for security and performance). You can control access to the original object, allowing you to interfere either before or after the request gets through to the original object without changing the service class.\\
 {\centering\includegraphics[scale=0.4]{img/proxy.png}\par}
 \subsection{Command}
-Encapsulate all information needed to perform an action or trigger an event at a later time. Information includes method name, the object that owns the method and values for the method parameters. Similar to adapter, but \texttt{Remote} requires an \texttt{execute()} function. Lets you parameterize clients with different commands, queue or log commands, and support "undo" operations.\\
+Encapsulate all information needed to perform an action or trigger an event at a later time. Information includes method name, the object that owns the method and values for the method parameters. Similar to adapter, but \texttt{Remote} requires an \texttt{execute()} function. Lets you parameterize clients with different commands, queue or log commands, and support "undo" operations. Remote = invoker.\\
 {\centering\includegraphics[scale=0.4]{img/command.png}\par}
 \section{Design Principles}
 \subsection{Single responsibility principle}
@@ -165,30 +165,30 @@ Objects should be open for extension, but closed for modification. When you spli
 Subtypes must be substitutable for their base types. You should use inheritance only when your superclass is substitutable by your subclass in all instances.
 \subsection{Interface segregation}
 The dependency of one class to another class should depend on the smallest possible interface. ONly expose necessary elements of an interface to a class. Clients shouldn't be forced to implement interfaces they don't use. Since a class can implement multiple interfaces, have small interfaces based on groups of methods, each serving one submodule, instead of one large interface. You can also have interfaces extend another interface to build specific interfaces. Allows you to split the responsibility of a class for SRP without violating LSP. 
-\subsection{Dependency inversion}
-Depend on abstractions (interfaces) instead on concrete classes.
-%\section{MIS Template}
-%\subsection{Uses}
-%\begin{itemize}
-%\item Imported constants, data types, and access programs.
-%\end{itemize}
-%\subsection{Syntax}
-%\begin{itemize}
-%\item Exported constants\\
-%\item Exported types\\
-%\item Exported access routine (routine name, input and output parameter types, and exceptions in a table)
-%\end{itemize}
-%\subsection{Semantics}
-%\begin{itemize}
-%\item State variables (global variables)\\
-%\item State invariants (predicates using state variables where after every access routine call, should remain true)\\
-%\item Assumptions\\
-%\item Access routine semantics (transition = changing state variables (e.g. transition: this.start, this.end := start, end), output = output of the access routine (e.g. output: out := this), exception = exception (e.g. exception: none))\\
-%\item Local functions, types, constants (declared for specification purposes only, not available at runtime)\\
-%\item Considerations (other information like "consider doing x to y to do z")\\
-%\end{itemize}
+\subsection{Dependency inversion (design for interfaces)}
+Depend on abstractions (interfaces) instead on concrete classes. Higher level modules should depend on interfaces of lower level modules, not directly on the lower level modules.
+\section{MIS Template}
+\subsection{Uses}
+\begin{itemize}
+\item Imported constants, data types, and access programs.
+\end{itemize}
+\subsection{Syntax}
+\begin{itemize}
+\item Exported constants\\
+\item Exported types\\
+\item Exported access routine (routine name, input and output parameter types, and exceptions in a table)
+\end{itemize}
+\subsection{Semantics}
+\begin{itemize}
+\item State variables (global variables)\\
+\item State invariants (predicates using state variables where after every access routine call, should remain true)\\
+\item Assumptions\\
+\item Access routine semantics (transition = changing state variables (e.g. transition: this.start, this.end := start, end), output = output of the access routine (e.g. output: out := this), exception = exception (e.g. exception: none))\\
+\item Local functions, types, constants (declared for specification purposes only, not available at runtime)\\
+\item Considerations (other information like "consider doing x to y to do z")\\
+\end{itemize}
 \section{Testing}
-{\centering\includegraphics[scale=0.4]{img/V-model.png}\par}
+{\centering\includegraphics[scale=0.3]{img/V-model.png}\par}
 \textbf{Unit testing}: testing individual methods/functions with inputs and expected outputs. Every successful test gives confidence in the code's correctness, but it never guarantees correctness. Should use Hoare triples, but you can't for black box testing.\\
 \textbf{Black box testing}: you have a method with a general idea of what it does, but you don't know how it works and you can only give it inputs and look at the output. You can start writing black box tests without the code being done.\\
 \textbf{White box testing}: you have a method and its code.\\
