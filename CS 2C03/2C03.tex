@@ -1,0 +1,220 @@
+\documentclass[10pt,landscape]{article}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+\usepackage{multicol,multirow}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+
+
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+    { \geometry{top=.4in,left=.4in,right=.4in,bottom=.4in} }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	}
+\pagestyle{empty}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+% -----------------------------------------------------------------------
+
+\title{COMPSCI 2C03 Cheat Sheet - young2}
+
+\begin{document}
+
+\raggedright
+\footnotesize
+
+%\begin{center}
+%     \Large{\textbf{COMPSCI 2C03 Cheat Sheet - young2}} \\
+%\end{center}
+\begin{multicols}{3}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{3pt}
+\setlength{\columnsep}{2pt}
+\textbf{Algorithm}: deterministic (same input = same output), effective (implementable with current hardware) and finite (has an end).\\
+\textbf{Array}: typically stored in contiguous memory, can be statically or dynamically (linked lists) stored.\\
+\textbf{Bag}: can add stuff but can't remove.\\
+\section{Tilde approximation}
+$\sim f(n)$ or $T(n)$ is an approximation of $f(n)$ where you drop everything but the highest order term since $$\lim_{n\rightarrow\infty}\frac{T(n)}{f(n)}=1$$
+\section{Order of growth approximation (Big O)}
+$O(f(n))$ is an approximation of $T(n)$ where you drop the constants. $O(f(n))$ is a set of functions that forms an \textbf{upper bound} of $T(n)$ past some $n_0$.
+$$\begin{array}{llll}\exists c>0 & \exists n_0\geq 0 & \forall n \geq n_0 & 0\leq T(n)\leq c\cdot f(n)
+\end{array}$$
+$$\lim_{n\rightarrow\infty}\frac{T(n)}{f(n)}\not=\infty$$
+\section{Big Omega}
+$\Omega(f(n))$ is a set of functions that forms a \textbf{lower bound} of $T(n)$ past some $n_0$.
+$$\begin{array}{llll}
+\exists c>0 & \exists n_0\geq 0 & \forall n \geq n_0 & T(n)\geq c\cdot f(n)
+\end{array}$$
+$$\lim_{n\rightarrow\infty}\frac{T(n)}{f(n)}\not=0$$
+\section{Big Theta}
+A combination of Big O and Big Omega where $\Theta(f(n))$ is a set of functions that forms an \textbf{upper and lower bound} of $T(n)$.
+$$\begin{array}{llll}\exists c_1,c_2>0 &
+\exists n_0\geq 0 &
+\forall n\geq n_0 &
+c_1\cdot f(n) \leq T(n) \leq c_2\cdot f(n)
+\end{array}$$
+$$\lim_{n\rightarrow\infty}\frac{T(n)}{f(n)}\not\in\{0,\infty\}$$
+A $T(n)$ with Big Theta must have the same Big O and Big Omega as Big Theta
+\section{Union-Find}
+Given $N$ nodes, we want functions:\\
+\quad \texttt{connected}: are two nodes in the same group\\
+\quad \texttt{union}: connect two nodes\\
+\quad \texttt{find}: what group is a node in\\
+\quad \texttt{count}: how many groups are there ($N$ minus number of successful unions)\\
+$\begin{array}{l|c|c|c}
+\text{Algorithm} & \text{Quick-Find} & \text{Quick-Union} & \text{Weighted QU}\\
+\hline
+\texttt{Initialization} & O(n) & O(n) & O(n)\\
+\texttt{Find} & O(1) & O(n) & O(\lg n)\\
+\texttt{Connected} & O(1) & O(n) & O(\lg n)\\
+\texttt{Union} & O(n) & O(n) & O(\lg n)
+\end{array}$
+\textbf{Quick find}: let nodes be indexes for an array where their value is the group they're in.\\
+\textbf{Quick union}: let nodes be indexes for an array where their value is their parent node's index.\\
+\textbf{Weighted QU}: when performing \texttt{union} with quick union, connect the root node of the smaller tree to the root of the larger tree.\\
+\textbf{Path compression}: when performing \texttt{find}, have every traversed node either point to the found root node or their own grandparent.
+\section{Shellsort}
+Have a sequence of $h$'s where the last one is $1$. For $i$ in set of $h$, create subarrays with every $i$th element and perform insertion sort and put them back. After each iteration, the array is $i$-sorted. $h$ is usually a $3x+1$ sequence where best case $O(n\log n)$ and worst case $O(n^{1.5})$
+\section{Priority Queue}
+A queue with implicitly ordered items where you can pop off the smallest/largest item.\\
+Stored in a binary heap structure (complete binary tree that maintains the heap property: where the children are always $\leq$ for max or $\geq$ for min).\\
+Stored in an array where the children of a node $k$ are in $2k$ and $2k+1$ and for a child $k$, its parent is in $\lfloor k/2 \rfloor$ and indices start at $1$. \\
+Insertion and deletion have worst case $O(\lg n)$. \\
+Nodes are placed according to swim and sink.\\
+\quad New nodes are inserted into the end of the binary heap and swam up. \\
+\quad Root node is popped off by swapping with the end node and sinking down the new root node.
+\section{Heapsort}
+1. Construct a binary heap with the input data\\
+2. Sort by popping off the root node until there's no elements in the heap\\
+Inner loop is longer than quicksort's and makes poor use of cache since array entry comparisons are rarely with nearby array entries.
+\section{Sorting}
+\textbf{Stable}: preserves the relative order of equal keys in the array (i.e., sorted by other keys if the given key is equal).\\
+\mbox{\tiny{
+$\begin{array}{c|c|c|c|c}
+\text{Algorithm} & \text{Stable?} & \text{In-place?} & \text{Running time} & \text{Extra space}\\
+\hline
+\text{selection sort} & \text{no} & \text{yes} & N^2 & 1\\
+\text{insertion sort} & \text{yes} & \text{yes} & \text{between } N \text{ and } N^2 & 1\\
+\text{shellsort} & \text{no} & \text{yes} & N\lg N \text{ or } N^{6/5} & 1\\
+\text{quicksort} & \text{no} & \text{yes} & N\lg N & \lg N\\
+\text{mergesort} & \text{yes} & \text{no} & N\lg N & N\\
+\text{heapsort} & \text{no} & \text{yes} & N\lg N & 1
+\end{array}$}}\\
+Insertion sort's running time depends on the order of items; it can outperform mergesort and quicksort when $N<30$.\\
+Quicksort's worst-case is quadratic when the pivot is the smallest or greatest element.\\
+
+\section{BST}
+\textbf{Floor}: the largest key in the BST less than or equal to the key we're flooring.\\
+\textbf{Ceiling}: the smallest key in the BST greater than or equal to the key we're ceiling-ing.\\
+\textbf{Predecessor}: the node with the largest key smaller than the current node's key (rightmost leaf on the left branch).\\
+\textbf{Successor}: the node with the smallest key larger than the current node's key (leftmode leaf on the right branch).
+\subsection{Deletion}
+\textbf{Lazy deletion}: for a node, set its key to \texttt{null} to create a tombstone.\\
+\textbf{Hibbard deletion}: to delete a node with key $k$, search for node $t$ with key $k$:\\
+\quad 0 children: delete $t$ by setting its parent link to \texttt{null}.\\
+\quad 1 children: delete $t$ and connect its single child to $t$'s parent.\\
+\quad 2 children: $t$ is replaced by $x$, the minimum key in $t$'s right subtree and $x$'s right child is $x$'s replacement. \\
+\subsection{2-3}
+Worst case of $O(\lg n)$ and direct implementation is complicated since you have to maintain multiple node types. \\
+Every path from the root to a leaf node has the same length.
+\subsection{Red-black}
+Always insert with red links and perform rotation and colour flip as necessary to maintain left-leaning property.
+\subsection{B-tree}
+Nodes are arrays that allow up to $M-1$ key-link pairs per node, where a link is the address of a page, rather than a symbol table value. $M$ can be very large, but it must be even. We maintain at least 2 key-link pairs at root and at least $M/2$ key-link pairs in other nodes. External nodes contain client keys, and have references to actual data. Internal nodes contain copies of keys to guide search. A special key $*$ known as a \textit{sentinel} helps implement the B-tree and acts as a wild card entry that's defined to be less than all other keys. \\
+\textbf{Search}: start at the root, find the interval for the search key and take the corresponding link. Search terminates in an external node.\\
+\textbf{Insertion}: search for the new key, insert at the bottom, and split nodes with $M$ key-link pairs on the way up the tree.
+\section{Hash tables}
+Works best when the number of keys stored is much less than all the possible keys. The array index for each element is computed using a hash function. $k$ \textit{hashes} to $h(k)$. $h(k)$ is the \textit{hash value} of $k$. A \textit{collision} occurs where more than one key hashes to the same slot. Can be solved with \textit{chaining} where each slot in the array is a linked list or red-black tree. Can also use open addressing if you only want one value per slot. A good hash function should have $h(k_1)=h(k_2)$ for $k_1\neq k_2$ unlikely and have \textit{simple uniform hashing} where each key is equally likely to hash into any slot, independent of other elements.
+\subsection{Open addressing}
+\textbf{Linear probing}: $h(k,i)=(h'(k)+i)\operatorname{mod} m$ with $i=0,1,\dots,m-1$ where $h$ is the linear probing hash function and $h'$ is a good hash function. $i$ is called the \textit{iterative index}. Suffers from the \textit{primary clustering} problem since over several insertions, it takes more time to insert and longer search times.\\
+\textbf{Quadratic probing}: $h(k,i)=(h'(k)+c_1i+c_2i^2)\operatorname{mod}m$ with $c_1,c_2\neq 0$ and $i=0,1,\dots,m-1$. Works better than linear probing, but if two keys have the same initial probe position, then their probe sequences are the same. Leads to a milder form of clustering called \textit{secondary clustering}.\\
+\textbf{Double hashing}: $h(k,i)=(h'(k)+ih''(k))\operatorname{mod}m$ where $h'$ and $h''$ are good hash functions. Works better when $h''(k)$ is relative prime to the hash-table size $m$. Set $m$ to prime and design $h''$ to always return a positive integer less than $m$.  
+\section{Graphs}
+\textbf{Path}: sequence of vertices connected by edges.\\
+\textbf{Cycle}: path whose first and last vertices are the same.\\
+\textbf{Connected}: two vertices are connected when in the same path.\\
+\textbf{Adjacent}: a vertex $A$ is adjacent to another $B$ if there's an edge from $A$ to $B$.\\
+\textbf{Incident}: an edge is incident to two vertices if it exists between them.\\
+\textbf{Degree of a vertex}: the number of edges incident to it.\\
+\textbf{Indegree}: the number of directed edges that point to that vertex.\\
+\textbf{Outdegree}: the number of directed edges that come out of that vertex.\\
+\textbf{Self-loop}: an edge that connects a vertex to itself.\\
+\textbf{Parallel}: two edges that connect the same pair of vertices.
+\subsection{DFS}
+Used to check if two vertices are connected. Generates a tree from a graph where the tree depends on the order the graph's connections are stored.
+\begin{verbatim}
+DFS(x):
+    mark x as marked
+    for vertices v connected to x:
+        if v isn't marked:
+            edgeTo[v] = x
+            DFS(v)
+\end{verbatim}
+\texttt{edgeTo[]} is the \textit{output tree} where its root is the initial vertex. Preprocessing space and time proportional to $O(|V|+|E|)$. A non-recursive DFS uses a stack in BFS instead of a queue. In theory, DFS is faster than union find since it provides a constant time guarantee, but in practice, the difference is negligible and union find is faster since it doesn't have to build a full representation of the graph and union find is online while DFS has to preprocess the graph. 
+\subsection{BFS}
+Used to find the shortest path in an unweighted graph. Takes time proportional to $O(|V|+|E|)$. Only different from DFS is that BFS uses a queue instead of a stack.
+\begin{verbatim}
+put initial vertex into a queue
+while queue isn't empty:
+    take the next vertex from the queue
+    if that vertex hasn't been marked:
+        mark it as marked
+        add its connected vertices to the queue
+\end{verbatim}
+\subsection{Connected components}
+An equivalence relation that satisfies reflexivity ($v$ is connected to $v$), symmetry (if $v$ is connected to $w$, then $w$ connected to $v$), and transitivity (if $v$ connected to $w$ and $w$ connected to $x$, then $v$ connected to $x$). A connected component is a maximal set of connected vertices. DFS and BFS can be used to find a connected component given an initial vertex. For checking correctness, union find is better since it doesn't have to preprocess the graph every time. 
+\subsection{Multiple-source shortest path}
+Use BFS, but initialize by enqueueing all source vertices. 
+\subsection{Precedence-constrained scheduling}
+Put the vertices in order such that all its directed edges point from a vertex earlier in the order to a vertex later in the order (or report that doing so is not possible). The order is not unique. A directed acyclic graph is required and solved by implementing a topological sort.\\
+\textbf{Topological sort}: use DFS with a reverse postorder.\\
+\textbf{Preorder}: put the vertex on a queue before the recursive calls.\\
+\textbf{Postorder}: put the vertex on a queue after the recursive calls.\\
+\textbf{Reverse postorder}: put the vertex on a stack after the recursive calls.
+\subsection{Strongly-connected components}
+Vertices $v$ and $w$ are strongly connected if there's a directed path from $v$ to $w$ and from $w$ to $v$ (i.e. a cycle containing $v$ and $w$).\\
+\textbf{Kosaraju-Sharir}: computes strongly connected components in a digraph $G$. First run DFS on $G^R$ ($G$ with edges reversed) and compute the reverse postorder. Run DFS on $G$, considering vertices in the order of the reverse postorder. Runtime is proportional to $O(|V|+|E|)$.  
+\subsection{Minimum spanning tree}
+\textbf{Spanning tree}: a subgraph that's connected, acyclic, and includes all of the vertices.\\
+\textbf{Minimum spanning tree}: a spanning tree whose weight (sum of the weights of its edges) is smaller than the weight of any other spanning trees of the same graph.\\
+\textbf{Cut}: a partition of its vertices into two non-empty disjoint sets (for a graph $G$, split it into $S$ and $G-S$). \\
+\textbf{Crossing edge}: connects a vertex in one set with a vertex in the other.\\
+\textbf{Cut property}: given any cut, the crossing edge of minimum weight is in the MST.\\ 
+\textbf{Cycle property}: let $C$ be any cycle and let $f$ be the maximum weighted edge belonging to $C$, then the MST doesn't contain $f$.
+\subsection{Kruskal's algorithm}
+Create a MST $T$ by considering edges in ascending order of weight. Add next edge to tree unless doing so would create a cycle. Proof is that adding an edge that creates a cycle wouldn't be in the MST according to cycle property and if it doesn't create an edge, it's in the MST by the cut property.\\
+\subsubsection{Cycle checking}
+Checking if adding an edge $(v,w)$ creates a cycle with DFS is bad since it takes $O(|E||V|)$ (at most $O(|V|)$ dfs calls $|E|$ times); instead, use union find, maintaining a set for each connected component. If $v$ and $w$ are in the same component, then the edge creates a cycle. To add the edge to the tree, union components containing $v$ and $w$. 
+\subsubsection{Implementation}
+Use a minimum priority queue to store all edges. Perform delete minimum operation on the queue. For each edge $e$, check for a cycle. If $e$ doesn't create a cycle, then add $e$ to $T$. Continue until $|V|-1$ edges are added to $T$. Worst case $O(|E|\lg |E|)$ since $O(|E|)$ for queue, all delete-min is $O(|E|\lg |E|)$, and cycle checking with union find is $O(|E|+|V|)$. 
+\subsection{Prim's algorithm}
+Creates a MST $T$ by starting with vertex $v_0$ and until there's $|V|-1$ edges, consider edges incident to vertices in $T$, but disregard any edges with both endpoints in $T$, then add to $T$ the edge with the minimum weight. Proof is that if $S$ is a subset of vertices in current tree $T$, Prim adds the cheapest edge with exactly one endpoint in $S$ and that edge is in the MST by the cut property.
+\subsubsection{Cheapest edge with only one endpoint in $T$}
+Checking all edges leads to $O(|E||V|)$ so instead maintain a priority queue. Lazy implementation is the queue stores edges incident to the vertices in $S$, taking $O(|E|\lg |E|)$. Eager implementation is the queue stores vertices adjacent to the vertices in $S$, taking $O(|E|\lg |V|)$.
+\subsubsection{Lazy implementation} 
+Maintain a queue of edges with at least one endpoint in $T$, where priority of edge $e$ is its weight. Delete minimum weight edge $e=(v,w)$ from the queue. Disregard if both endpoints $v$ and $w$ are marked (i.e. both in $T$). Otherwise, let $w$ be the unmarked vertex: add to queue any edge incident to $w$ (assuming other endpoint isn't in $T$) and add $e$ to $T$ and mark $w$. 
+\subsubsection{Eager implementation}
+Maintain a priority queue of vertices connected by an edge to $T$ where priority of vertex $v$ is the minimum weighted edge connecting $v$ to $T$. Delete the minimum vertex $v$ and mark $v$ to be in $T$. Update the priority queue by considering all edges $e=(v,w)$ incident to $v$. Ignore if $w$ is already in $T$. Add $w$ to queue if not already in $T$. If already on queue, then reduce priority of $w$ if $e$ becomes the more minimal weighted edge connecting $w$ to $T$. 
+\subsection{Kruskal vs. Prim}
+Kruskal adds edges, but Prim adds nodes until it forms an MST. 
+\end{multicols}
+\end{document}
