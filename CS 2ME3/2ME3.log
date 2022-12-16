@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.8)  16 DEC 2022 12:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.16)  16 DEC 2022 18:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -400,8 +400,7 @@ tex.def
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count299
 \l__pdf_internal_box=\box98
-)
-No file 2ME3.aux.
+) (2ME3.aux)
 \openout1 = `2ME3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -492,12 +491,14 @@ Package color Info: Driver file: pdftex.def on input line 149.
 (C:\Users\geony\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 )
 Package hyperref Info: Link coloring ON on input line 39.
+ (2ME3.out) (2ME3.out)
 \@outlinefile=\write3
 \openout3 = `2ME3.out'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
 
- (C:\Users\geony\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+
+(C:\Users\geony\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
@@ -506,107 +507,99 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
 (C:\Users\geony\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/UML.png, id=3, 520.19344pt x 130.98938pt>
+<img/UML.png, id=147, 520.19344pt x 130.98938pt>
 File: img/UML.png Graphic file (type png)
 <use img/UML.png>
 Package pdftex.def Info: img/UML.png  used on input line 115.
 (pdftex.def)             Requested size: 208.07368pt x 52.3948pt.
-<img/decorator.png, id=5, 344.78813pt x 115.18031pt>
+<img/decorator.png, id=149, 344.78813pt x 115.18031pt>
 File: img/decorator.png Graphic file (type png)
 <use img/decorator.png>
 Package pdftex.def Info: img/decorator.png  used on input line 120.
 (pdftex.def)             Requested size: 137.9128pt x 46.07129pt.
-<img/factory.png, id=6, 395.22656pt x 166.37157pt>
+<img/factory.png, id=150, 395.22656pt x 166.37157pt>
 File: img/factory.png Graphic file (type png)
 <use img/factory.png>
 Package pdftex.def Info: img/factory.png  used on input line 124.
 (pdftex.def)             Requested size: 158.08781pt x 66.54744pt.
-<img/strategy.png, id=7, 358.33875pt x 167.12437pt>
+<img/strategy.png, id=151, 358.33875pt x 167.12437pt>
 File: img/strategy.png Graphic file (type png)
 <use img/strategy.png>
 Package pdftex.def Info: img/strategy.png  used on input line 127.
 (pdftex.def)             Requested size: 143.33296pt x 66.84856pt.
-<img/observer.png, id=8, 523.20468pt x 213.79875pt>
-File: img/observer.png Graphic file (type png)
-<use img/observer.png>
-Package pdftex.def Info: img/observer.png  used on input line 133.
-(pdftex.def)             Requested size: 209.27815pt x 85.51797pt.
-<img/singleton.png, id=9, 158.09062pt x 76.03406pt>
+<img/observer_push.png, id=152, 523.20468pt x 94.85437pt>
+File: img/observer_push.png Graphic file (type png)
+<use img/observer_push.png>
+Package pdftex.def Info: img/observer_push.png  used on input line 131.
+(pdftex.def)             Requested size: 209.27815pt x 37.94107pt.
+<img/observer_pull.png, id=153, 523.20468pt x 103.13531pt>
+File: img/observer_pull.png Graphic file (type png)
+<use img/observer_pull.png>
+Package pdftex.def Info: img/observer_pull.png  used on input line 133.
+(pdftex.def)             Requested size: 209.27815pt x 41.25337pt.
+<img/singleton.png, id=154, 158.09062pt x 76.03406pt>
 File: img/singleton.png Graphic file (type png)
 <use img/singleton.png>
-Package pdftex.def Info: img/singleton.png  used on input line 136.
+Package pdftex.def Info: img/singleton.png  used on input line 137.
 (pdftex.def)             Requested size: 63.23512pt x 30.41307pt.
 
 [1
 
 {C:/Users/geony/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/UML.pn
-g> <./img/decorator.png> <./img/factory.png> <./img/strategy.png>]
-Overfull \hbox (8.02016pt too wide) in paragraph at lines 148--148
+g> <./img/decorator.png> <./img/factory.png> <./img/strategy.png> <./img/observ
+er_push.png>]
+Overfull \hbox (8.02016pt too wide) in paragraph at lines 149--149
 []        \OT1/cmtt/m/n/8 if (instance == null) instance = new Singleton();[] 
  []
 
-<img/adapter.png, id=51, 434.37282pt x 42.1575pt>
+<img/adapter.png, id=173, 434.37282pt x 42.1575pt>
 File: img/adapter.png Graphic file (type png)
 <use img/adapter.png>
-Package pdftex.def Info: img/adapter.png  used on input line 151.
+Package pdftex.def Info: img/adapter.png  used on input line 152.
 (pdftex.def)             Requested size: 173.74605pt x 16.86269pt.
-<img/proxy.png, id=52, 417.05812pt x 70.76437pt>
+<img/proxy.png, id=174, 417.05812pt x 70.76437pt>
 File: img/proxy.png Graphic file (type png)
 <use img/proxy.png>
-Package pdftex.def Info: img/proxy.png  used on input line 154.
+Package pdftex.def Info: img/proxy.png  used on input line 155.
 (pdftex.def)             Requested size: 166.82028pt x 28.30524pt.
-<img/command.png, id=53, 486.31688pt x 54.9553pt>
+<img/command.png, id=175, 486.31688pt x 54.9553pt>
 File: img/command.png Graphic file (type png)
 <use img/command.png>
-Package pdftex.def Info: img/command.png  used on input line 157.
+Package pdftex.def Info: img/command.png  used on input line 158.
 (pdftex.def)             Requested size: 194.5233pt x 21.98172pt.
-<img/V-model.png, id=54, 501.875pt x 401.5pt>
+<img/V-model.png, id=176, 501.875pt x 401.5pt>
 File: img/V-model.png Graphic file (type png)
 <use img/V-model.png>
-Package pdftex.def Info: img/V-model.png  used on input line 190.
+Package pdftex.def Info: img/V-model.png  used on input line 191.
 (pdftex.def)             Requested size: 200.74643pt x 160.59715pt.
-
-Overfull \vbox (11.10545pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (4.11841pt too high) has occurred while \output is active []
-
-
-[2 <./img/observer.png> <./img/singleton.png> <./img/adapter.png> <./img/proxy.
-png> <./img/command.png> <./img/V-model.png>] (2ME3.aux)
-
-Package rerunfilecheck Warning: File `2ME3.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `2ME3.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  EB516EC85D6A0351501B7FB0D9AAB627;5009.
+[2 <./img/observer_pull.png> <./img/singleton.png> <./img/adapter.png> <./img/p
+roxy.png> <./img/command.png> <./img/V-model.png>] (2ME3.aux)
+Package rerunfilecheck Info: File `2ME3.out' has not changed.
+(rerunfilecheck)             Checksum: DDDA6ECD4AD33F27D6D2BD2247F20104;4634.
  ) 
 Here is how much of TeX's memory you used:
- 10461 strings out of 475281
- 165158 string characters out of 2774065
- 546532 words of memory out of 3000000
- 31751 multiletter control sequences out of 15000+600000
- 476295 words of font info for 54 fonts, out of 8000000 for 9000
+ 10504 strings out of 475281
+ 165935 string characters out of 2774064
+ 540268 words of memory out of 3000000
+ 31792 multiletter control sequences out of 15000+600000
+ 475958 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,8n,77p,589b,634s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\geony\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-0800.pk><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmbx8.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/geony/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/geony/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/geony/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/geony
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Use
-rs/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb
-><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mtt8.pfb>
-Output written on 2ME3.pdf (2 pages, 290604 bytes).
+<C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbx8.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/geony/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/geony/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/geony/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/geony/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/geo
+ny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/U
+sers/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.p
+fb>
+Output written on 2ME3.pdf (2 pages, 312423 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 242 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 344 words of extra memory for PDF output out of 10000 (max. 10000000)
 

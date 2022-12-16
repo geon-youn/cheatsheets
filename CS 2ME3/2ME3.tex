@@ -127,10 +127,11 @@ Encapsulation of algorithms. Define a set of algorithms, each in their own class
 {\centering\includegraphics[scale=0.4]{img/strategy.png}\par}
 \subsection{Observer}
 Subjects maintain a list of observers and automatically notifies them of any state changes. Observers can unsub and resub to the subject. Variations of observers:\\
-\qquad Push: subject updates observers.\\
-\qquad Pull: subject notifies observers a change was made, but the observer decides when to request that information.\\
-\qquad Poll: the observer asks subject if things have changed.\\
-{\centering\includegraphics[scale=0.4]{img/observer.png}\par}
+\textbf{Push}: subject updates observers.\\
+{\centering\includegraphics[scale=0.4]{img/observer_push.png}\par}
+\textbf{Pull}: subject notifies observers a change was made, but the observer decides when to request that information.\\
+{\centering\includegraphics[scale=0.4]{img/observer_pull.png}\par}
+\textbf{Poll}: the observer asks subject if things have changed.\\
 \subsection{Singleton}
 Allows you to limit a class to have only a single instance through a private constructor. Allows for lazy instantiation where you don't actually instantiate it until you need it.\\
 {\centering\includegraphics[scale=0.4]{img/singleton.png}\par}
@@ -166,26 +167,26 @@ Subtypes must be substitutable for their base types. You should use inheritance 
 The dependency of one class to another class should depend on the smallest possible interface. ONly expose necessary elements of an interface to a class. Clients shouldn't be forced to implement interfaces they don't use. Since a class can implement multiple interfaces, have small interfaces based on groups of methods, each serving one submodule, instead of one large interface. You can also have interfaces extend another interface to build specific interfaces. Allows you to split the responsibility of a class for SRP without violating LSP. 
 \subsection{Dependency inversion}
 Depend on abstractions (interfaces) instead on concrete classes.
-\section{MIS Template}
-\subsection{Uses}
-\begin{itemize}
-\item Imported constants, data types, and access programs.
-\end{itemize}
-\subsection{Syntax}
-\begin{itemize}
-\item Exported constants\\
-\item Exported types\\
-\item Exported access routine (routine name, input and output parameter types, and exceptions in a table)
-\end{itemize}
-\subsection{Semantics}
-\begin{itemize}
-\item State variables (global variables)\\
-\item State invariants (predicates using state variables where after every access routine call, should remain true)\\
-\item Assumptions\\
-\item Access routine semantics (transition = changing state variables (e.g. transition: this.start, this.end := start, end), output = output of the access routine (e.g. output: out := this), exception = exception (e.g. exception: none))\\
-\item Local functions, types, constants (declared for specification purposes only, not available at runtime)\\
-\item Considerations (other information like "consider doing x to y to do z")\\
-\end{itemize}
+%\section{MIS Template}
+%\subsection{Uses}
+%\begin{itemize}
+%\item Imported constants, data types, and access programs.
+%\end{itemize}
+%\subsection{Syntax}
+%\begin{itemize}
+%\item Exported constants\\
+%\item Exported types\\
+%\item Exported access routine (routine name, input and output parameter types, and exceptions in a table)
+%\end{itemize}
+%\subsection{Semantics}
+%\begin{itemize}
+%\item State variables (global variables)\\
+%\item State invariants (predicates using state variables where after every access routine call, should remain true)\\
+%\item Assumptions\\
+%\item Access routine semantics (transition = changing state variables (e.g. transition: this.start, this.end := start, end), output = output of the access routine (e.g. output: out := this), exception = exception (e.g. exception: none))\\
+%\item Local functions, types, constants (declared for specification purposes only, not available at runtime)\\
+%\item Considerations (other information like "consider doing x to y to do z")\\
+%\end{itemize}
 \section{Testing}
 {\centering\includegraphics[scale=0.4]{img/V-model.png}\par}
 \textbf{Unit testing}: testing individual methods/functions with inputs and expected outputs. Every successful test gives confidence in the code's correctness, but it never guarantees correctness. Should use Hoare triples, but you can't for black box testing.\\
