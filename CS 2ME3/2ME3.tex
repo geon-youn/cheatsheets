@@ -123,7 +123,7 @@ Create objects while hiding the creation logic to the client and the client uses
 \quad Allow clients to create objects through a function instead of its actual constructor (i.e., not using \texttt{new})\\
 {\centering\includegraphics[scale=0.4]{img/factory.png}\par}
 \subsection{Strategy}
-Encapsulation of algorithms. Define a set of algorithms, each in their own class, and let their objects be interchangeable (i.e., they all inherit from a class or interface). Similar to factory but not hiding object creation and you need a function implemented by these classes.\\
+Encapsulation of algorithms. Define a set of algorithms, each in their own class, and let their objects be interchangeable (i.e., they all inherit from a class or interface). Similar to factory but not hiding object creation and you need a function implemented by these classes. Allows algorithms to be swapped out at runtime.\\
 {\centering\includegraphics[scale=0.4]{img/strategy.png}\par}
 \subsection{Observer}
 Subjects maintain a list of observers and automatically notifies them of any state changes. Observers can unsub and resub to the subject. Variations of observers:\\
@@ -133,7 +133,7 @@ Subjects maintain a list of observers and automatically notifies them of any sta
 {\centering\includegraphics[scale=0.4]{img/observer_pull.png}\par}
 \textbf{Poll}: the observer asks subject if things have changed.\\
 \subsection{Singleton}
-Allows you to limit a class to have only a single instance through a private constructor. Allows for lazy instantiation where you don't actually instantiate it until you need it.\\
+Allows you to limit a class to have only a single (or 0) instance through a private constructor. Allows for lazy instantiation where you don't actually instantiate it until you need it. Allows other classes to be extended with this pattern.\\
 {\centering\includegraphics[scale=0.4]{img/singleton.png}\par}
 \begin{verbatim}
 public class Singleton {
@@ -200,7 +200,7 @@ Statement and edge coverage still aren't enough since it may miss errors in the 
 \textbf{Path coverage}: a test suit has path coverage if it traverses all pahts from the start node to the end node(s) at least once in the code graph. Often times path coverage is too large (e.g. a circuit with 20 boolean inputs).\\
 \textbf{Static testing}: reading the code.\\
 \textbf{Dynamic testing}: running the code.
-\subsection{Number of bugs}
+\subsection{Number of bugs (fault seeding)}
 If $N$ is the actual number of bugs, you found $C$ bugs, another team found $M$ bugs and you both found $S$ common bugs, then the actual number of bugs ranges from $N_1=(C-S)M/S$ to $N_2=(M-S)C/S$.\\
 Assumes that $M/S = N/(C-S)$. I.e. the ratio of marked fish to caught marked fish resembles actual fish to caught actual fish, but it might not be really true since marked fish are easier to catch.
 \end{multicols}
