@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.16)  18 DEC 2022 16:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.16)  18 DEC 2022 16:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -495,7 +495,7 @@ Package hyperref Info: Link coloring ON on input line 39.
 \@outlinefile=\write3
 \openout3 = `2GA3.out'.
 
-<img/lg.png, id=167, 606.01407pt x 242.40562pt>
+<img/lg.png, id=163, 606.01407pt x 242.40562pt>
 File: img/lg.png Graphic file (type png)
 <use img/lg.png>
 Package pdftex.def Info: img/lg.png  used on input line 55.
@@ -512,12 +512,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
 (C:\Users\geony\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/rp.png, id=169, 547.2947pt x 121.95563pt>
+<img/rp.png, id=165, 547.2947pt x 121.95563pt>
 File: img/rp.png Graphic file (type png)
 <use img/rp.png>
 Package pdftex.def Info: img/rp.png  used on input line 142.
 (pdftex.def)             Requested size: 213.44406pt x 47.56248pt.
-<img/c.png, id=170, 538.26094pt x 292.84406pt>
+<img/c.png, id=166, 538.26094pt x 292.84406pt>
 File: img/c.png Graphic file (type png)
 <use img/c.png>
 Package pdftex.def Info: img/c.png  used on input line 183.
@@ -527,37 +527,39 @@ Package pdftex.def Info: img/c.png  used on input line 183.
 
 {C:/Users/geony/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/lg.png
 > <./img/rp.png> <./img/c.png>]
-Overfull \vbox (1.82014pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (8.14653pt too high) has occurred while \output is active []
+Overfull \vbox (5.82014pt too high) has occurred while \output is active []
 
 
 [2] (2GA3.aux)
-Package rerunfilecheck Info: File `2GA3.out' has not changed.
-(rerunfilecheck)             Checksum: 515998F66A30AE665AA1B2311B6E72C1;5688.
+
+Package rerunfilecheck Warning: File `2GA3.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `2GA3.out':
+(rerunfilecheck)             Before: 8B6A5C6FCEE17DA242F5DB954E2F1DBA;5574
+(rerunfilecheck)             After:  515998F66A30AE665AA1B2311B6E72C1;5688.
  ) 
 Here is how much of TeX's memory you used:
- 10446 strings out of 475281
- 164658 string characters out of 2774064
- 632840 words of memory out of 3000000
- 31736 multiletter control sequences out of 15000+600000
- 472285 words of font info for 39 fonts, out of 8000000 for 9000
+ 10441 strings out of 475281
+ 164609 string characters out of 2774064
+ 615868 words of memory out of 3000000
+ 31733 multiletter control sequences out of 15000+600000
+ 471678 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,6n,77p,921b,591s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\geony\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 0500.pk><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx5.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmbx7.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmbx9.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/geony/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/geony/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/geony/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/geony/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on 2GA3.pdf (2 pages, 503776 bytes).
+e1/public/amsfonts/cm/cmmi5.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/geony/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/geony/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/geony/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on 2GA3.pdf (2 pages, 490548 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
+ 249 PDF objects out of 1000 (max. 8388607)
  57 named destinations out of 1000 (max. 500000)
- 344 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 336 words of extra memory for PDF output out of 10000 (max. 10000000)
 
