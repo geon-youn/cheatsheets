@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.8)  16 DEC 2022 12:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.16)  18 DEC 2022 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -400,8 +400,7 @@ tex.def
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count299
 \l__pdf_internal_box=\box98
-)
-No file 2GA3.aux.
+) (2GA3.aux)
 \openout1 = `2GA3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -456,15 +455,15 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: landscape 
-* h-part:(L,W,R)=(36.135pt, 722.7pt, 36.135pt)
-* v-part:(T,H,B)=(36.135pt, 542.02501pt, 36.135pt)
+* h-part:(L,W,R)=(23.84923pt, 747.27153pt, 23.84923pt)
+* v-part:(T,H,B)=(23.84923pt, 566.59654pt, 23.84923pt)
 * \paperwidth=794.96999pt
 * \paperheight=614.295pt
-* \textwidth=722.7pt
-* \textheight=542.02501pt
-* \oddsidemargin=-36.135pt
-* \evensidemargin=-36.135pt
-* \topmargin=-73.135pt
+* \textwidth=747.27153pt
+* \textheight=566.59654pt
+* \oddsidemargin=-48.42076pt
+* \evensidemargin=-48.42076pt
+* \topmargin=-85.42076pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -492,120 +491,73 @@ Package color Info: Driver file: pdftex.def on input line 149.
 (C:\Users\geony\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 )
 Package hyperref Info: Link coloring ON on input line 39.
+ (2GA3.out) (2GA3.out)
 \@outlinefile=\write3
 \openout3 = `2GA3.out'.
 
-<img/trans.png, id=3, 822.07124pt x 231.11343pt>
-File: img/trans.png Graphic file (type png)
-<use img/trans.png>
-Package pdftex.def Info: img/trans.png  used on input line 54.
-(pdftex.def)             Requested size: 189.0724pt x 53.15497pt.
-<img/lg.png, id=5, 606.01407pt x 242.40562pt>
+<img/lg.png, id=167, 606.01407pt x 242.40562pt>
 File: img/lg.png Graphic file (type png)
 <use img/lg.png>
 Package pdftex.def Info: img/lg.png  used on input line 55.
 (pdftex.def)             Requested size: 139.3803pt x 55.7521pt.
-<img/had.png, id=6, 298.86656pt x 139.27031pt>
-File: img/had.png Graphic file (type png)
-<use img/had.png>
-Package pdftex.def Info: img/had.png  used on input line 57.
-(pdftex.def)             Requested size: 86.66907pt x 40.38734pt.
-<img/fad.png, id=7, 513.41812pt x 195.73125pt>
-File: img/fad.png Graphic file (type png)
-<use img/fad.png>
-Package pdftex.def Info: img/fad.png  used on input line 59.
-(pdftex.def)             Requested size: 143.75609pt x 54.80437pt.
-<img/l.png, id=8, 426.09187pt x 193.47281pt>
-File: img/l.png Graphic file (type png)
-<use img/l.png>
-Package pdftex.def Info: img/l.png  used on input line 61.
-(pdftex.def)             Requested size: 127.82854pt x 58.04228pt.
-<img/register.png, id=9, 453.94594pt x 231.11343pt>
-File: img/register.png Graphic file (type png)
-<use img/register.png>
-Package pdftex.def Info: img/register.png  used on input line 64.
-(pdftex.def)             Requested size: 181.57515pt x 92.44373pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
 
- (C:\Users\geony\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+
+(C:\Users\geony\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
 
 
 (C:\Users\geony\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/decoder.png, id=10, 310.15875pt x 179.16937pt>
-File: img/decoder.png Graphic file (type png)
-<use img/decoder.png>
-Package pdftex.def Info: img/decoder.png  used on input line 68.
-(pdftex.def)             Requested size: 155.079pt x 89.58446pt.
-<img/vna.png, id=11, 297.36093pt x 280.79906pt>
-File: img/vna.png Graphic file (type png)
-<use img/vna.png>
-Package pdftex.def Info: img/vna.png  used on input line 97.
-(pdftex.def)             Requested size: 104.07788pt x 98.28114pt.
-<img/ha.png, id=12, 295.85532pt x 268.00125pt>
-File: img/ha.png Graphic file (type png)
-<use img/ha.png>
-Package pdftex.def Info: img/ha.png  used on input line 99.
-(pdftex.def)             Requested size: 103.5509pt x 93.80183pt.
+<img/rp.png, id=169, 547.2947pt x 121.95563pt>
+File: img/rp.png Graphic file (type png)
+<use img/rp.png>
+Package pdftex.def Info: img/rp.png  used on input line 142.
+(pdftex.def)             Requested size: 213.44406pt x 47.56248pt.
+<img/c.png, id=170, 538.26094pt x 292.84406pt>
+File: img/c.png Graphic file (type png)
+<use img/c.png>
+Package pdftex.def Info: img/c.png  used on input line 183.
+(pdftex.def)             Requested size: 188.39415pt x 102.49695pt.
 
 [1
 
-{C:/Users/geony/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/trans.
-png> <./img/lg.png> <./img/had.png> <./img/fad.png> <./img/l.png> <./img/regist
-er.png> <./img/decoder.png> <./img/vna.png> <./img/ha.png>]
-<img/c.png, id=53, 538.26094pt x 292.84406pt>
-File: img/c.png Graphic file (type png)
-<use img/c.png>
-Package pdftex.def Info: img/c.png  used on input line 139.
-(pdftex.def)             Requested size: 188.39415pt x 102.49695pt.
-<img/rw.png, id=54, 554.82281pt x 310.91156pt>
-File: img/rw.png Graphic file (type png)
-<use img/rw.png>
-Package pdftex.def Info: img/rw.png  used on input line 158.
-(pdftex.def)             Requested size: 221.92519pt x 124.36241pt.
-<img/rp.png, id=55, 547.2947pt x 121.95563pt>
-File: img/rp.png Graphic file (type png)
-<use img/rp.png>
-Package pdftex.def Info: img/rp.png  used on input line 164.
-(pdftex.def)             Requested size: 213.44406pt x 47.56248pt.
- [2 <./img/c.png> <./img/rw.png> <./img/rp.png>] (2GA3.aux)
+{C:/Users/geony/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/lg.png
+> <./img/rp.png> <./img/c.png>]
+Overfull \vbox (1.82014pt too high) has occurred while \output is active []
 
-Package rerunfilecheck Warning: File `2GA3.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: Checksums for `2GA3.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  FA99AEE5760B387C3CA9D1BD070FA6C6;784.
+Overfull \vbox (8.14653pt too high) has occurred while \output is active []
+
+
+[2] (2GA3.aux)
+Package rerunfilecheck Info: File `2GA3.out' has not changed.
+(rerunfilecheck)             Checksum: 515998F66A30AE665AA1B2311B6E72C1;5688.
  ) 
 Here is how much of TeX's memory you used:
- 10466 strings out of 475281
- 164888 string characters out of 2774065
- 538111 words of memory out of 3000000
- 31759 multiletter control sequences out of 15000+600000
- 475351 words of font info for 51 fonts, out of 8000000 for 9000
+ 10446 strings out of 475281
+ 164658 string characters out of 2774064
+ 632840 words of memory out of 3000000
+ 31736 multiletter control sequences out of 15000+600000
+ 472285 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,5n,77p,384b,692s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmbx8.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/geony/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/geony/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/geony/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/geony/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/geo
-ny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/U
-sers/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.p
-fb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmtt8.pfb>
-Output written on 2GA3.pdf (2 pages, 1136144 bytes).
+ 72i,6n,77p,921b,591s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\geony\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+0500.pk><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx5.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmbx7.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmbx9.pfb><C:/Users/geony/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/geony/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/geony/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/geony/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/geony/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on 2GA3.pdf (2 pages, 503776 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
+ 344 words of extra memory for PDF output out of 10000 (max. 10000000)
 
